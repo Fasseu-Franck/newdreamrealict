@@ -155,66 +155,50 @@ export const COURSES: Course[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "1",
-    name: "Marie",
-    role: "Secrétaire Bureautique",
-    quote: "Grâce à Dream Real-ICT, j'ai eu accès à une formation poussée et de qualité pour trouver un emploi !",
-    avatarBg: "from-emerald-500 to-teal-700",
+    name: "Marie K.",
+    role: "Diplômée Secrétariat Bureautique (DQP)",
+    quote: "Grâce au CFPC Dream Real-ICT, j'ai acquis une parfaite maîtrise des outils bureautiques et de la gestion administrative. J'ai décroché mon poste immédiatement après l'obtention de mon DQP !",
+    avatarBg: "from-purple-600/20 to-indigo-600/20",
     rating: 5,
   },
   {
     id: "2",
-    name: "Paul",
-    role: "Webmestre",
-    quote: "Des formateurs à l'écoute et un accompagnement au top. Ils sont des passionnés et des experts dans leur domaine.",
-    avatarBg: "from-blue-500 to-indigo-700",
+    name: "Paul N.",
+    role: "Spécialiste Développement Web & Mobile",
+    quote: "Des formateurs passionnés et très praticiens. On développe de vraies applications dès les premières semaines. Une préparation d'excellence aux réalités du marché informatique.",
+    avatarBg: "from-emerald-600/20 to-teal-600/20",
     rating: 5,
   },
   {
     id: "3",
-    name: "Amina",
-    role: "Webmestre",
-    quote: "J'ai pu me reconvertir facilement dans le numérique grâce à la pratique permanente au centre.",
-    avatarBg: "from-purple-500 to-pink-700",
+    name: "Amina S.",
+    role: "Webmestre & CMS WordPress",
+    quote: "Reconversion professionnelle réussie à 100%. L'accompagnement individuel et l'accès permanent au matériel informatique m'ont permis d'être autonome et confiante.",
+    avatarBg: "from-amber-600/20 to-orange-600/20",
     rating: 5,
   },
   {
     id: "4",
-    name: "Serge",
-    role: "Comptable",
-    quote: "Jusqu'à là, j'avais des difficultés à trouver un emploi, mais grâce à la formation sur Sage à Dream Real-ICT, j'ai pu me reconvertir et décrocher mon poste.",
-    avatarBg: "from-amber-500 to-orange-700",
+    name: "Serge M.",
+    role: "Diplômé Comptabilité Informatisée (Sage)",
+    quote: "La formation intense sur Sage Saari et les déclarations fiscales m'a ouvert les portes d'un cabinet comptable renommé à Yaoundé. L'équipe pédagogique est exceptionnelle.",
+    avatarBg: "from-blue-600/20 to-cyan-600/20",
     rating: 5,
   },
   {
     id: "5",
-    name: "Chantal",
-    role: "Graphiste",
-    quote: "Du début jusqu'à la fin, Dream Real-ICT m'a accompagnée et m'a donnée les outils nécessaires pour être prête à l'examen national et entrer dans le monde du travail.",
-    avatarBg: "from-green-500 to-emerald-700",
+    name: "Chantal B.",
+    role: "Infographe & Designer Graphique",
+    quote: "De la conception visuelle à la charte graphique, Dream Real-ICT m'a apporté toute l'expertise technique nécessaire pour réussir l'examen national DQP haut la main.",
+    avatarBg: "from-pink-600/20 to-rose-600/20",
     rating: 5,
   },
   {
     id: "6",
-    name: "Lionel",
-    role: "Graphiste",
-    quote: "J'ai particulièrement apprécié le respect de chacun de mes besoins et de mes exigences, ainsi que leur engagement envers moi.",
-    avatarBg: "from-cyan-500 to-blue-700",
-    rating: 5,
-  },
-  {
-    id: "7",
-    name: "Fatou",
-    role: "Stagiaire",
-    quote: "J'ai recommandé Dream Real-ICT à tous mes amis. Contrairement à de nombreux centres de formation, ils ne mentent pas et sont très sérieux.",
-    avatarBg: "from-rose-500 to-red-700",
-    rating: 5,
-  },
-  {
-    id: "8",
-    name: "Kevin",
-    role: "Diplômé",
-    quote: "Ce qui m'a touché c'est qu'ils se battent pour une insertion professionnelle réelle, avec un réseau professionnel qui ouvre des portes.",
-    avatarBg: "from-lime-500 to-green-700",
+    name: "Lionel T.",
+    role: "Technicien Maintenance & Réseau",
+    quote: "L'apprentissage 100% pratique sur le dépannage et le câblage m'a permis d'intégrer une grande entreprise. Le réseau professionnel du centre est un vrai accélérateur.",
+    avatarBg: "from-green-600/20 to-emerald-600/20",
     rating: 5,
   },
 ];
@@ -242,11 +226,48 @@ export const FAQ_LIST: FAQItem[] = [
   },
 ];
 
-export const STATS = [
-  { value: "10+", label: "Années d'Expérience cumulative" },
-  { value: "15+", label: "Formateurs Qualifiés" },
-  { value: "25+", label: "Formations Accessibles" },
-  { value: "98%", label: "Taux de Satisfaction" },
+export interface StatItem {
+  id: string;
+  value: string;
+  label: string;
+  description: string;
+  iconName: string;
+  subtext: string;
+}
+
+export const STATS: StatItem[] = [
+  {
+    id: "exp",
+    value: "10+",
+    label: "Années d'Expérience",
+    description: "Plus d'une décennie d'excellence pédagogique dans la formation aux métiers du numérique et de la gestion administrative à Yaoundé.",
+    iconName: "Award",
+    subtext: "Expertise & Pédagogie certifiée *",
+  },
+  {
+    id: "trainers",
+    value: "15+",
+    label: "Formateurs Qualifiés",
+    description: "Des professionnels en activité et ingénieurs passionnés engagés dans un accompagnement individuel 100% pratique.",
+    iconName: "Users",
+    subtext: "Encadrement personnalisé au quotidien *",
+  },
+  {
+    id: "courses",
+    value: "25+",
+    label: "Formations Accessibles",
+    description: "Un catalogue complet allant des diplômes DQP/CQP reconnus par l'État aux modules intensifs du soir et à la carte.",
+    iconName: "BookOpen",
+    subtext: "Diplômantes et formations courtes *",
+  },
+  {
+    id: "satisfaction",
+    value: "98%",
+    label: "Taux de Satisfaction",
+    description: "Nos apprenants et diplômés valident la qualité des cours et l'impact direct de la formation sur leur insertion professionnelle.",
+    iconName: "TrendingUp",
+    subtext: "Insertion pro & Compétences réelles *",
+  },
 ];
 
 export const ADVANTAGES = [
@@ -287,5 +308,57 @@ export const PILLARS = [
     title: "Certifications reconnues par l'État",
     description: "Des diplômes DQP/CQP et attestations reconnus par l'État pour valoriser officiellement votre CV.",
     icon: "GraduationCap",
+  },
+];
+
+export interface Partner {
+  id: string;
+  name: string;
+  logo: string;
+  description?: string;
+}
+
+export const PARTNERS: Partner[] = [
+  {
+    id: "hr-akym",
+    name: "HR by AKYM",
+    logo: "/partners/hr-akym.png",
+    description: "Solutions RH et accompagnement stratégique",
+  },
+  {
+    id: "medicom",
+    name: "Medicom",
+    logo: "/partners/medicom.png",
+    description: "Services et Solutions de Communication",
+  },
+  {
+    id: "kreative-framework",
+    name: "The Kreative Framework",
+    logo: "/partners/kreative-framework.png",
+    description: "Agence de Création & Stratégie Digitale",
+  },
+  {
+    id: "tep-multiservices",
+    name: "TEP Multi-Services",
+    logo: "/partners/tep-multiservices.jpg",
+    description: "Services & Solutions Entreprises",
+  },
+  {
+    id: "mbombo-solutions",
+    name: "Mbombo Solutions",
+    logo: "/partners/mbombo-solutions.png",
+    description: "Solutions Entreprises & Innovation",
+  },
+  {
+    id: "arkiv-institute",
+    name: "Arkiv Program Training Institute",
+    logo: "/partners/arkiv-institute.png",
+    description: "Institut de Formation & Programme Spécialisé",
+  },
+  {
+    id: "pluriel",
+    name: "Pluriel",
+    logo: "/partners/pluriel.png",
+    description: "For a brighter experience together !",
   },
 ];

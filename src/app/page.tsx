@@ -12,6 +12,9 @@ import {
 import CourseCard from "@/components/ui/CourseCard";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import FAQAccordion from "@/components/ui/FAQAccordion";
+import AnimatedStatsSection from "@/components/ui/AnimatedStatsSection";
+import ArcTestimonialsSection from "@/components/ui/ArcTestimonialsSection";
+import PartnersSection from "@/components/ui/PartnersSection";
 import {
   Rocket,
   Wrench,
@@ -291,22 +294,7 @@ export default function Home() {
       </section>
 
       {/* STATS & EXPERIENCE SECTION */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel rounded-3xl p-8 lg:p-12 border border-white/10 relative overflow-hidden">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {STATS.map((stat, idx) => (
-              <div key={idx} className="space-y-2">
-                <div className="font-heading font-extrabold text-4xl sm:text-5xl text-gradient-green">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm text-[#c3c6cd] font-medium">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <AnimatedStatsSection stats={STATS} />
 
       {/* ADVANTAGES (De sérieux atouts) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -342,26 +330,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS (Ce que disent nos apprenants) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#76f57e] block">
-            Ils nous font confiance
-          </span>
-          <h2 className="font-heading font-extrabold text-3xl text-white">
-            Ce que dicen nos apprenants..
-          </h2>
-          <p className="text-base text-[#c3c6cd]">
-            Découvrez les retours d'expérience de nos étudiants et diplômés.
-          </p>
-        </div>
+      {/* PARTNERS SECTION */}
+      <PartnersSection />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {TESTIMONIALS.slice(0, 8).map((t) => (
-            <TestimonialCard key={t.id} testimonial={t} />
-          ))}
-        </div>
-      </section>
+      {/* TESTIMONIALS (Ce que disent nos apprenants - Arc de cercle) */}
+      <ArcTestimonialsSection testimonials={TESTIMONIALS} />
 
       {/* FAQ SECTION */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

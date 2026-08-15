@@ -23,8 +23,12 @@ export default function Navbar() {
           
           {/* Logo & Brand Name */}
           <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#13293d] to-[#1b2023] border border-[#56b94c]/40 flex items-center justify-center text-[#78dd6b] shadow-lg group-hover:border-[#56b94c] group-hover:scale-105 transition-all duration-300">
-              <GraduationCap className="w-6 h-6 text-[#76f57e]" />
+            <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white/5 border border-[#56b94c]/40 group-hover:border-[#76f57e] transition-all duration-300 group-hover:scale-105 shadow-lg p-0.5">
+              <img
+                src="/logo.png"
+                alt="CFPC Dream Real-ICT Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-xl tracking-tight text-white flex items-center gap-1.5">
